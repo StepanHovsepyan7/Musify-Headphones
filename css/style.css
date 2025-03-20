@@ -135,7 +135,13 @@ a {
   width: 223px;
   border-radius: 20px;
   cursor: pointer;
+  transition: 0.5s ease-in-out;
   box-shadow: 0px 0px 21px 0px #F14A16;
+  border: 3px solid #f1491600;
+}
+.topBtn1:hover{
+  border: 3px solid #F14A16;
+  background-color:#070606;
 }
 .topBtn2{
   margin-left: 27px;
@@ -150,8 +156,13 @@ a {
   font-weight: 700;
   border: 3px solid #F14A16;
   box-shadow: 0px 0px 18px 0px #F14A16;
+  transition: 0.5s ease-in-out;
 }
-
+.topBtn2:hover{
+  background-color: #f1491600;
+  border: 3px solid #000000;
+  color: white;
+}
 .topBtn2 i {
   margin-right: 10px;
 }
