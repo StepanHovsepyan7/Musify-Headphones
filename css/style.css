@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  background-color: #000;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+[class*="__container"] {
+  margin: 0 auto;
+  max-width: 1728px;
+  overflow: hidden;
+}
+
+/* header */
+
+.headerNav {
+  position: fixed;
+  width: 100%;
+  color: #ffffff;
+}
+.navigation {
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
+  margin-right: 88px;
+}
+.navigation li {
+  list-style: none;
+}
+.navigation a {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 4%;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.navIcons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.navIcons a {
+  font-size: 24px;
+}
+.navIcons li {
+  list-style: none;
+}
+.loginBtn {
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 4%;
+  color: #f14a16;
+  font-size: 20px;
+  border-radius: 15px;
+  border: 1px solid #f14a16;
+  width: 127px;
+  height: 52px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.loginBtn:hover {
+  background-color: #f14a16;
+  border: 1px solid #ffffff;
+  color: white;
+}
+
+.mode{
+  margin-left: 94px;
+  transition: 0.3s;
+}
+
+.mode:hover{
+  transform: rotate(90deg);
+}
