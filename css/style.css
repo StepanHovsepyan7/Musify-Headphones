@@ -33,7 +33,7 @@ a {
   width: 100%;
   color: #ffffff;
   height: 130px;
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  background: rgba(0, 0, 0, 0.6); 
   backdrop-filter: blur(10px);
 }
 .navigation {
@@ -86,7 +86,6 @@ a {
   margin-left: 94px;
   transition: 0.3s;
 }
-
 .mode:hover {
   transform: rotate(90deg);
 }
@@ -187,7 +186,6 @@ a {
   padding: 20px;
   position: absolute;
   left: 12%;
-  /* bottom: 150px; */
   transform: translateY(-50%);
 }
 .descriptionHeadphones {
