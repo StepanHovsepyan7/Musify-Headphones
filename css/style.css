@@ -26,7 +26,7 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 12px; 
+  width: 12px;
 }
 ::-webkit-scrollbar-thumb {
   background: #f14a16;
@@ -348,4 +348,43 @@ a {
   width: 150px;
   font-size: 20px;
   height: 50px;
+}
+
+/* ad Section */
+
+.adParent {
+  background: linear-gradient(91.42deg, #370665 0%, #35589a 100%);
+  height: 232px;
+  border-radius: 25px;
+  color: #ffffff;
+  margin-top: 147px;
+}
+.adParent h1 {
+  font-weight: 700;
+  text-align: center;
+  font-size: 45px;
+  line-height: 100%;
+  padding-top: 30px;
+}
+.adContent {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.adContent span {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 100%;
+  margin-left: 24px;
+}
+.fa-circle-check {
+  font-size: 36px;
+}
+.fa-circle-info {
+  font-size: 36px;
+}
+.fa-truck {
+  font-size: 36px;
 }
