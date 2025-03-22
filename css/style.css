@@ -25,6 +25,14 @@ a {
   padding: 10px 20px;
 }
 
+::-webkit-scrollbar {
+  width: 12px; 
+}
+::-webkit-scrollbar-thumb {
+  background: #f14a16;
+  border-radius: 10px;
+}
+
 /* header */
 
 .headerNav {
