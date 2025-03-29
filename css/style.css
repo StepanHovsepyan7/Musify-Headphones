@@ -70,6 +70,10 @@ a {
     rgba(255, 255, 255, 0.07) 74.79%
   );
 }
+
+.light-mode-text {
+  color: black !important; 
+}
 /* mobile nav */
 
 .menuIcon {
@@ -235,9 +239,9 @@ a {
   border-radius: 50%;
   border: 1px solid white;
   padding: 20px;
-  position: absolute;
-  left: 12%;
-  transform: translateY(-50%);
+}
+.arrowDownA{
+  margin-right: 237px;
 }
 .descriptionHeadphones {
   background: linear-gradient(

@@ -1,76 +1,75 @@
 let changeMode = document.getElementsByClassName('mode')[0];
-let sunIcon = document.getElementsByClassName('fa-sun')[0];
-let topParagraph = document.getElementsByClassName('topParagraph')[0]
+let sunIcon = document.getElementsByClassName('fa-sun')[0] || document.getElementsByClassName('fa-moon')[0]; 
+let topParagraph = document.getElementsByClassName('topParagraph')[0];
 let body = document.querySelector('body');
 let trendsCard = document.querySelectorAll('.trendsCard');
-let descriptionHeadphones  = document.querySelectorAll('.descriptionHeadphones');
+let descriptionHeadphones = document.querySelectorAll('.descriptionHeadphones');
 let typeOfHeadphones = document.querySelectorAll('.typeOfHeadphones');
 let previousPrice = document.querySelectorAll('.previousPrice');
 let titles = document.querySelectorAll('h1');
 
-
-changeMode.addEventListener('click', () => {
-
-    if (sunIcon.classList.contains('fa-sun')) {
-        sunIcon.classList.remove('fa-sun');
-        sunIcon.classList.add('fa-moon');
-        body.classList.add('bodycolor');
-        topParagraph.style.color = '#f14a16';
+function windowSize() {
+    let isLightMode = sunIcon.classList.contains('fa-moon');
+    
+    if (window.innerWidth <= 470) {
+        descriptionHeadphones.forEach((e) => {
+            e.style.background = isLightMode ? '#282828B2' : '';
+            e.style.border = isLightMode ? '1px solid #0000001F' : '';
+        });
         
-        titles.forEach(title => {
-            title.classList.remove('dark-mode');
-            title.classList.add('lightMode');
+        previousPrice.forEach((e) => {
+            e.style.color = isLightMode ? '#FFFFFF' : '#000000'; 
         });
-
-        trendsCard.forEach(card => {
-            card.classList.remove('dark-mode');
-            card.classList.add('light-mode');
+        typeOfHeadphones.forEach((e) => {
+            e.style.color = isLightMode ? '#FFFFFF' : '#000000'; 
         });
-
-          descriptionHeadphones.forEach((e)=>{
-            e.classList.remove('dark-mode');
-            e.classList.add('light-mode2');
-        })
-
-          typeOfHeadphones.forEach((e)=>{
-            e.classList.remove('dark-mode');
-            e.classList.add('lightMode');
-        })
-
-          previousPrice.forEach((e)=>{
-            e.classList.remove('dark-mode');
-            e.classList.add('lightMode');
-        })
 
     } else {
+        descriptionHeadphones.forEach((e) => {
+            e.style.background = ''; 
+            e.style.border = ''; 
+        });
+
+        previousPrice.forEach((e) => {
+            e.style.color = isLightMode ? '#000000' : '#FFFFFF'; 
+        });
+        typeOfHeadphones.forEach((e) => {
+            e.style.color = isLightMode ? '#000000' : '#FFFFFF'; 
+        });
+    }
+}
+
+changeMode.addEventListener('click', () => {
+    let isDarkMode = sunIcon.classList.contains('fa-moon');
+
+    if (isDarkMode) {
+        
         sunIcon.classList.remove('fa-moon');
         sunIcon.classList.add('fa-sun');
         body.classList.remove('bodycolor');
-        topParagraph.style.color = '#A4A4A4';
-        titles.forEach(title => {
-            title.classList.remove('lightMode');
-            title.classList.add('dark-mode');
-        });
+        topParagraph.classList.remove('light-mode-text');
 
-        trendsCard.forEach(card => {
-            card.classList.add('dark-mode');
-            card.classList.remove('light-mode');
-        });
+        titles.forEach(title => title.classList.replace('lightMode', 'dark-mode'));
+        trendsCard.forEach(card => card.classList.replace('light-mode', 'dark-mode'));
+        descriptionHeadphones.forEach(e => e.classList.replace('light-mode2', 'dark-mode'));
+        typeOfHeadphones.forEach(e => e.classList.replace('lightMode', 'dark-mode'));
+        previousPrice.forEach(e => e.classList.replace('lightMode', 'dark-mode'));
 
-        descriptionHeadphones.forEach((e)=>{
-            e.classList.add('dark-mode');
-            e.classList.remove('light-mode2');
-        })
+    } else {
+        
+        sunIcon.classList.remove('fa-sun');
+        sunIcon.classList.add('fa-moon');
+        body.classList.add('bodycolor');
+        topParagraph.classList.add('light-mode-text');
 
-          typeOfHeadphones.forEach((e)=>{
-            e.classList.add('dark-mode');
-            e.classList.remove('lightMode');
-        })
-
-          previousPrice.forEach((e)=>{
-            e.classList.add('dark-mode');
-            e.classList.remove('lightMode');
-        })
-          
+        titles.forEach(title => title.classList.replace('dark-mode', 'lightMode'));
+        trendsCard.forEach(card => card.classList.replace('dark-mode', 'light-mode'));
+        descriptionHeadphones.forEach(e => e.classList.replace('dark-mode', 'light-mode2'));
+        typeOfHeadphones.forEach(e => e.classList.replace('dark-mode', 'lightMode'));
+        previousPrice.forEach(e => e.classList.replace('dark-mode', 'lightMode'));
     }
+
+    windowSize(); 
 });
+
+window.addEventListener("resize", windowSize);
