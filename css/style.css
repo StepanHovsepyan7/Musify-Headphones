@@ -54,8 +54,8 @@ a {
   background-color: #fafafa;
 }
 
-.trendsCard.light-mode {
-  background: #282828;
+.light-mode {
+  background-color: #282828;
   box-shadow: 5px 10px 18px 0px #00000040;
 }
 

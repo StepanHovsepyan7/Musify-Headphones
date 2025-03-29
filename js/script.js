@@ -63,7 +63,9 @@ changeMode.addEventListener('click', () => {
             title.classList.add('dark-mode'); 
             title.classList.remove('lightMode');  
         });        
-        trendsCard.forEach(card => card.classList.replace('light-mode', 'dark-mode'));
+        trendsCard.forEach((e)=>{
+            e.style.background = '';
+        })
         descriptionHeadphones.forEach(e => e.classList.replace('light-mode2', 'dark-mode'));
         previousPrice.forEach(e => {
             e.classList.add('dark-mode');
@@ -86,7 +88,9 @@ changeMode.addEventListener('click', () => {
             title.classList.add('lightMode');
             title.classList.remove('dark-mode');   
         });        
-        trendsCard.forEach(card => card.classList.replace('dark-mode', 'light-mode'));
+        trendsCard.forEach((e)=>{
+            e.style.background = '#282828';
+        })
         descriptionHeadphones.forEach(e => e.classList.replace('dark-mode', 'light-mode2'));
         previousPrice.forEach(e => {
             e.classList.add('lightMode'); 
