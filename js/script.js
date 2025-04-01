@@ -7,6 +7,13 @@ let descriptionHeadphones = document.querySelectorAll('.descriptionHeadphones');
 let typeOfHeadphones = document.querySelectorAll('.typeOfHeadphones');
 let previousPrice = document.querySelectorAll('.previousPrice');
 let titles = document.querySelectorAll('h1');
+let navigationA = document.querySelectorAll('.navigation a');
+let navIconsA = document.querySelectorAll('.navIcons a')
+let faarrowdown =  document.getElementsByClassName('fa-arrow-down')[0]
+let menuIcon = document.getElementsByClassName ('menuIcon')[0];
+let headerNav = document.getElementsByClassName('headerNav')[0];
+
+
 
 function windowSize() {
     let isLightMode = sunIcon.classList.contains('fa-moon');
@@ -57,7 +64,21 @@ changeMode.addEventListener('click', () => {
         sunIcon.classList.remove('fa-moon');
         sunIcon.classList.add('fa-sun');
         body.classList.remove('bodycolor');
+        headerNav.style.background = ''
         topParagraph.classList.remove('light-mode-text');
+        
+        faarrowdown.style.border = '';
+        faarrowdown.style.color = '';
+        menuIcon.style.color = '';
+
+        navIconsA.forEach((e)=>{
+            e.classList.add('dark-mode');
+            e.classList.remove('lightMode');
+        })
+
+        navigationA.forEach((e)=>{
+            e.style.color = 'white'
+        })
 
         titles.forEach(title => {
             title.classList.add('dark-mode'); 
@@ -82,7 +103,27 @@ changeMode.addEventListener('click', () => {
         sunIcon.classList.remove('fa-sun');
         sunIcon.classList.add('fa-moon');
         body.classList.add('bodycolor');
+        headerNav.style.background = `linear-gradient(
+            116.15deg,
+            rgba(192, 192, 192, 0.63) -10.88%,
+            rgba(255, 255, 255, 0.49) -10.87%,
+            rgba(255, 255, 255, 0.07) 74.79%
+        )`;
+        headerNav.style.backdropFilter = 'blur(30px)'; 
         topParagraph.classList.add('light-mode-text');
+
+        faarrowdown.style.border = '1px solid black';
+        faarrowdown.style.color = 'black';
+        menuIcon.style.color ='black';
+
+        navigationA.forEach((e)=>{
+            e.style.color = 'black'
+        })
+
+        navIconsA.forEach((e)=>{
+            e.classList.remove('dark-mode');
+            e.classList.add('lightMode');
+        })
 
         titles.forEach(title => {
             title.classList.add('lightMode');
