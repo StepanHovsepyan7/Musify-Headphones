@@ -12,6 +12,7 @@ let navIconsA = document.querySelectorAll('.navIcons a')
 let faarrowdown =  document.getElementsByClassName('fa-arrow-down')[0]
 let menuIcon = document.getElementsByClassName ('menuIcon')[0];
 let headerNav = document.getElementsByClassName('headerNav')[0];
+let topBtn2 = document.getElementsByClassName('topBtn2')[0];
 
 
 
@@ -111,7 +112,6 @@ changeMode.addEventListener('click', () => {
         )`;
         headerNav.style.backdropFilter = 'blur(30px)'; 
         topParagraph.classList.add('light-mode-text');
-
         faarrowdown.style.border = '1px solid black';
         faarrowdown.style.color = 'black';
         menuIcon.style.color ='black';
@@ -141,6 +141,14 @@ changeMode.addEventListener('click', () => {
         typeOfHeadphones.forEach(e => {
             e.classList.add('lightMode'); 
             e.classList.remove('dark-mode');   
+        });
+
+        topBtn2.addEventListener('mouseover', () => {
+            topBtn2.style.color = 'black';
+        });
+        
+        topBtn2.addEventListener('mouseout', () => {
+            topBtn2.style.color = '';
         });
     }
 
