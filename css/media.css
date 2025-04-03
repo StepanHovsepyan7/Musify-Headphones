@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1500px) {
+@media  screen and (max-width: 1500px) {
   .arrowDownA {
     margin-right: auto !important;
   }
@@ -8,13 +8,17 @@
   }
 }
 
-@media only screen and (max-width: 1300px) {
+@media  screen and (max-width: 1300px) {
   .headphoneCards3 {
     display: none;
   }
+
+  .trendsParent {
+    flex-wrap: wrap !important;
+  }
 }
 
-@media only screen and (max-width: 1100px) {
+@media  screen and (max-width: 1100px) {
   .loginBtn {
     display: none;
   }
@@ -39,13 +43,13 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media  screen and (max-width: 900px) {
   .headphoneCards2 {
     display: none;
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media  screen and (max-width: 800px) {
   .menuIcon {
     font-size: 24px !important;
     display: block !important;
@@ -86,9 +90,16 @@
     font-size: 17px !important;
     margin-left: 34px !important;
   }
+
+  .trends__container {
+    padding-top: 64px !important;
+  }
+  .trendsCard:nth-child(3){
+    display:  none !important;
+  }
 }
 
-@media only screen and (max-width: 500px) {
+@media  screen and (max-width: 500px) {
   .logoImg img {
     height: 100px !important;
     width: 100px !important;
@@ -110,9 +121,13 @@
   .arrowDownA {
     margin-right: 0 !important;
   }
+
+  .title {
+    font-size: 54px !important;
+}
 }
 
-@media only screen and (max-width: 470px) {
+@media  screen and (max-width: 470px) {
   .mainContent h1 {
     font-size: 60px !important;
   }
@@ -133,11 +148,49 @@
     margin-top: 150px !important;
   }
   .headphonesParent {
-    bottom: 104px !important;
+    bottom: 19px !important;
   }
-}
 
-@media only screen and (max-width: 380px) {
+  .topBtn1:nth-child(2){
+    font-size: 12px !important;
+    width: 99px !important;
+    height: 33px !important;
+  }
+
+  .popularBtn2{
+    font-size: 10px !important;
+    width: 99px !important;
+    height: 33px !important;
+  }
+
+  .buttonsTrendsParent {
+    gap: 17px !important;
+  }
+
+  .currentPrice2 {
+    font-size: 20px !important;
+  }
+
+  .trendsCard h4 {
+    line-height: 20px !important;
+    font-size: 16px !important;
+  }
+
+  .cardList li {
+    font-size: 12px !important;
+  }
+
+  .trendsCard {
+    margin-top: 60px !important;
+    height: 652px !important;
+    width: 350px !important;
+  }
+
+  .title {
+    font-size: 46px !important;
+}
+}
+@media  screen and (max-width: 380px) {
   .mainContent h1 {
     font-size: 50px !important;
   }
@@ -173,5 +226,27 @@
     height: 132px;
     left: 70px !important;
     width: 107px;
+  }
+  .title {
+    font-size: 39px !important;
+  }
+}
+
+@media  screen and (max-width:360px){
+  .headphonesParent {
+    bottom: 19px !important;
+  }
+}
+
+
+/* height responsive */
+
+@media screen and (max-height: 800px) {
+  .mainContent {
+    margin-top: 100px !important;
+  }
+  
+  .topOfTheMain {
+    min-height: 800px !important;
   }
 }
