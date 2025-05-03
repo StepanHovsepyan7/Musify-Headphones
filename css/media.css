@@ -90,6 +90,9 @@
   .offerParent {
     padding-top: 52px !important;
   }
+  .arrivalCard:nth-child(3) {
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -123,8 +126,8 @@
     gap: 15px !important;
     margin-top: 15px !important;
   }
-  .accImages{
-    height: 100% !important;  
+  .accImages {
+    height: 100% !important;
     width: 100% !important;
   }
 }
@@ -336,7 +339,7 @@
     border: 2px solid white;
     border-radius: 25px;
   }
-  .title4{
+  .title4 {
     line-height: 100% !important;
     font-size: 35px !important;
   }

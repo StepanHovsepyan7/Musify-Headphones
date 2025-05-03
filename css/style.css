@@ -533,11 +533,42 @@ img {
   justify-content: center;
   margin-top: 30px;
 }
-.accImages{
+.accImages {
   width: 720px;
   height: 400px;
   cursor: pointer;
 }
 
-
 /* accessories Section */
+
+.arrivals__container {
+  margin-top: 64px;
+}
+
+.arrivalCard {
+  margin-top: 103px;
+  overflow: hidden;
+  height: auto;
+  width: 480px;
+  padding-bottom: 20px;
+  border-radius: 50px;
+  border: 1px solid white;
+  color: #ffffff;
+  background: #370665;
+  border: 5px solid #35589a;
+}
+.arrivalCard img {
+  width: 100%;
+  height: 331px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.arrivalCard h4 {
+  text-align: start;
+  max-width: 329px;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 36px;
+  letter-spacing: 2%;
+}
