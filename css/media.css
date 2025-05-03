@@ -1,4 +1,4 @@
-@media  screen and (max-width: 1500px) {
+@media screen and (max-width: 1500px) {
   .arrowDownA {
     margin-right: auto !important;
   }
@@ -8,7 +8,7 @@
   }
 }
 
-@media  screen and (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
   .headphoneCards3 {
     display: none;
   }
@@ -17,17 +17,27 @@
     flex-wrap: wrap !important;
   }
 }
+@media screen and (max-width: 1270px) {
+  #timerImg {
+    height: 450px !important;
+  }
+  .badge {
+    width: 140px !important;
+    font-size: 34px !important;
+    height: 140px !important;
+  }
+}
 
-@media  screen and (max-width: 1200px) {
-  .adContent span{
+@media screen and (max-width: 1200px) {
+  .adContent span {
     font-size: 24px !important;
   }
-  .adContent{
+  .adContent {
     flex-wrap: wrap !important;
   }
 }
 
-@media  screen and (max-width: 1100px) {
+@media screen and (max-width: 1100px) {
   .loginBtn {
     display: none;
   }
@@ -50,13 +60,31 @@
     align-items: center;
     gap: 30px;
   }
+
+  .offerParent {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .title3 {
+    display: none !important;
+  }
+  .title2 {
+    display: block !important;
+  }
+  #timerParent {
+    padding-top: 45px !important;
+  }
+  .offerParent {
+    padding-top: 52px !important;
+  }
 }
 
-@media  screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .headphoneCards2 {
     display: none;
   }
-  .adContent{
+  .adContent {
     gap: 15px !important;
   }
 
@@ -65,7 +93,7 @@
   }
 }
 
-@media  screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .menuIcon {
     font-size: 24px !important;
     display: block !important;
@@ -110,13 +138,12 @@
   .trends__container {
     padding-top: 64px !important;
   }
-  .trendsCard:nth-child(3){
-    display:  none !important;
+  .trendsCard:nth-child(3) {
+    display: none !important;
   }
 }
 
-
-@media screen and (max-width:550px) {
+@media screen and (max-width: 550px) {
   .adParent {
     height: 484px !important;
     width: 285px;
@@ -124,14 +151,15 @@
     margin-top: 50px !important;
   }
 
-  .adContent{
+  .adContent {
     flex-direction: column !important;
     gap: 74px !important;
     margin: 0 auto !important;
     padding-top: 19px !important;
   }
 
-  .adContent span{
+  .adContent span {
+    line-height: 30px !important;
     font-size: 24px !important;
   }
 
@@ -142,20 +170,21 @@
     gap: 10px !important;
     justify-content: flex-start !important;
     max-width: 200px !important;
-}
+  }
   .adParent h1 {
     margin: 0 auto;
     max-width: 190px !important;
     min-height: 58px !important;
     font-size: 24px !important;
+    line-height: 30px !important;
   }
-  
+
   .adContent i {
     font-size: 30px !important;
   }
 }
 
-@media  screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .logoImg img {
     height: 100px !important;
     width: 100px !important;
@@ -180,10 +209,18 @@
 
   .title {
     font-size: 54px !important;
-}
+  }
+  #timerImg {
+    height: 367px !important;
+  }
+  .badge {
+    width: 125px !important;
+    font-size: 26px !important;
+    height: 125px !important;
+  }
 }
 
-@media  screen and (max-width: 470px) {
+@media screen and (max-width: 470px) {
   .mainContent h1 {
     font-size: 60px !important;
   }
@@ -207,13 +244,13 @@
     bottom: 19px !important;
   }
 
-  .topBtn1:nth-child(2){
+  .topBtn1:nth-child(2) {
     font-size: 12px !important;
     width: 99px !important;
     height: 33px !important;
   }
 
-  .popularBtn2{
+  .popularBtn2 {
     font-size: 10px !important;
     width: 99px !important;
     height: 33px !important;
@@ -244,9 +281,24 @@
 
   .title {
     font-size: 46px !important;
+  }
+  .timerNames span {
+    font-size: 32px !important;
+  }
+  #timerImg {
+    width: 100% !important;
+  }
+  .badge {
+    width: 100px !important;
+    font-size: 26px !important;
+    height: 100px !important;
+  }
+  .timerNums span {
+    font-size: 46px !important;
+  }
 }
-}
-@media  screen and (max-width: 380px) {
+
+@media screen and (max-width: 380px) {
   .mainContent h1 {
     font-size: 50px !important;
   }
@@ -288,12 +340,14 @@
   }
 }
 
-@media  screen and (max-width:360px){
+@media screen and (max-width: 360px) {
   .headphonesParent {
     bottom: 19px !important;
   }
+  .badge{
+    margin-top: 25px !important;
+  }
 }
-
 
 /* height responsive */
 
@@ -301,7 +355,7 @@
   .mainContent {
     margin-top: 100px !important;
   }
-  
+
   .topOfTheMain {
     min-height: 800px !important;
   }

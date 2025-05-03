@@ -13,6 +13,7 @@ let faarrowdown =  document.getElementsByClassName('fa-arrow-down')[0]
 let menuIcon = document.getElementsByClassName ('menuIcon')[0];
 let headerNav = document.getElementsByClassName('headerNav')[0];
 let topBtn2 = document.getElementsByClassName('topBtn2')[0];
+let timerClock = document.querySelectorAll('.timerClock')
 
 
 
@@ -67,6 +68,9 @@ changeMode.addEventListener('click', () => {
         body.classList.remove('bodycolor');
         headerNav.style.background = ''
         topParagraph.classList.remove('light-mode-text');
+        timerClock.forEach((e)=>{
+            e.classList.remove('timerLight')
+        })
         
         faarrowdown.style.border = '';
         faarrowdown.style.color = '';
@@ -115,6 +119,9 @@ changeMode.addEventListener('click', () => {
         faarrowdown.style.border = '1px solid black';
         faarrowdown.style.color = 'black';
         menuIcon.style.color ='black';
+        timerClock.forEach((e)=>{
+            e.classList.add('timerLight')
+        })
 
         navigationA.forEach((e)=>{
             e.style.color = 'black'
@@ -155,4 +162,45 @@ changeMode.addEventListener('click', () => {
     windowSize(); 
 });
 
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('mode') === 'light') changeMode.click();
+});
+
+
+changeMode.addEventListener('click', () => {
+  let isDark = sunIcon.classList.contains('fa-moon');
+  localStorage.setItem('mode', isDark ? 'light' : 'dark');
+});
+
 window.addEventListener("resize", windowSize);
+
+
+
+
+
+let timer = setInterval(()=>{
+
+    let countDownDate = new Date("2030 15:37:25").getTime();
+
+    let now = new Date().getTime();
+
+    let distance = countDownDate - now;
+
+    let hoursDom = document.getElementById('hours');
+    let minutesDom = document.getElementById('minutes');
+    let secondsDom = document.getElementById('seconds');
+
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+    
+    hoursDom.innerHTML = `${hours}`
+    minutesDom.innerHTML = `${minutes}`
+    secondsDom.innerHTML = `${seconds}`
+
+},1000)
+
+
