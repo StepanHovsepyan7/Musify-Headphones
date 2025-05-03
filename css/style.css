@@ -452,10 +452,10 @@ img {
 .offer__container {
   padding-top: 171px;
 }
-.imagePart{
+.imagePart {
   position: relative;
 }
-.badge{
+.badge {
   position: absolute;
   padding-top: 20px;
   border-radius: 50%;
@@ -504,12 +504,40 @@ img {
   margin-left: 20px;
   font-weight: 400;
 }
-.title2{
+.title2 {
   display: none;
 }
-.timerLight{
+.timerLight {
   color: #000000;
 }
-.topBtn2:nth-child(2):hover{
+.topBtn2:nth-child(2):hover {
   color: #000000;
 }
+
+/* accessories Section */
+
+.accesories__container {
+  margin-top: 64px;
+}
+.accParent {
+  margin-top: 104px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.accParent2 {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.accImages{
+  width: 720px;
+  height: 400px;
+  cursor: pointer;
+}
+
+
+/* accessories Section */

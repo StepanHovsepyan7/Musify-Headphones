@@ -6,6 +6,10 @@
   .headphonesParent {
     flex-wrap: wrap;
   }
+  .accImages {
+    width: 590px !important;
+    height: 330px !important;
+  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -25,6 +29,10 @@
     width: 140px !important;
     font-size: 34px !important;
     height: 140px !important;
+  }
+  .accImages {
+    width: 500px !important;
+    height: 278px !important;
   }
 }
 
@@ -64,6 +72,10 @@
   .offerParent {
     flex-wrap: wrap;
   }
+  .accImages {
+    width: 400px !important;
+    height: 222px !important;
+  }
 }
 @media screen and (max-width: 1000px) {
   .title3 {
@@ -90,6 +102,30 @@
 
   .adParent h1 {
     font-size: 35px !important;
+  }
+  .accParent {
+    flex-wrap: wrap !important;
+  }
+  .accParent2 {
+    flex-wrap: wrap !important;
+  }
+  .accImages {
+    height: 90% !important;
+    width: 90% !important;
+  }
+  .title4 {
+    line-height: 60px !important;
+  }
+  .accParent {
+    gap: 15px !important;
+  }
+  .accParent2 {
+    gap: 15px !important;
+    margin-top: 15px !important;
+  }
+  .accImages{
+    height: 100% !important;  
+    width: 100% !important;
   }
 }
 
@@ -296,6 +332,14 @@
   .timerNums span {
     font-size: 46px !important;
   }
+  .accImages {
+    border: 2px solid white;
+    border-radius: 25px;
+  }
+  .title4{
+    line-height: 100% !important;
+    font-size: 35px !important;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -344,7 +388,7 @@
   .headphonesParent {
     bottom: 19px !important;
   }
-  .badge{
+  .badge {
     margin-top: 25px !important;
   }
 }
