@@ -131,7 +131,7 @@ changeMode.addEventListener("click", () => {
     });
 
     titles.forEach((title) => {
-      title.classList.add("lightMode");
+      title.classList.toggle("lightMode");
       title.classList.remove("dark-mode");
     });
     trendsCard.forEach((e) => {

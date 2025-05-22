@@ -20,6 +20,23 @@
   .trendsParent {
     flex-wrap: wrap !important;
   }
+
+  .footerContent {
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+  }
+  .countryInfo {
+    display: none !important;
+  }
+  .subParent {
+    display: none !important;
+  }
+  #subH4 {
+    display: none !important;
+  }
+  #logoFooter {
+    margin-top: 0px !important;
+  }
 }
 @media screen and (max-width: 1270px) {
   #timerImg {
@@ -75,6 +92,9 @@
   .accImages {
     width: 400px !important;
     height: 222px !important;
+  }
+  .footerContent {
+    justify-content: space-between !important;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -259,6 +279,77 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 29px !important;
+    padding-left: 40px;
+  }
+
+  .footerContent > div:first-child {
+    order: 10;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+  }
+
+  .footerContent ul {
+    padding: 0;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: start;
+  }
+
+  .mainLi {
+    font-size: 24px !important;
+  }
+
+  .footerContent li {
+    font-size: 17px;
+    margin-top: 10px;
+  }
+
+  .cont {
+    margin-top: 20px;
+  }
+
+  .footerIcons {
+    justify-content: start !important;
+    margin-top: 10px;
+  }
+
+  .subParent {
+    display: none !important;
+  }
+
+  .countryInfo {
+    display: none;
+  }
+  .topBtn2 {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  #subH4 {
+    display: none !important;
+  }
+
+  #privacyPolicy {
+    text-align: center !important;
+    font-weight: 700;
+    font-size: 21px !important;
+    line-height: 46px !important;
+    padding-top: 16px !important;
+  }
+  #logoFooter {
+    width: 193px !important;
+    height: 172px !important;
+    margin-top: 0 !important;
+  }
+}
+
 @media screen and (max-width: 470px) {
   .mainContent h1 {
     font-size: 60px !important;
@@ -343,6 +434,8 @@
     line-height: 100% !important;
     font-size: 35px !important;
   }
+
+  /* footer */
 }
 
 @media screen and (max-width: 380px) {
