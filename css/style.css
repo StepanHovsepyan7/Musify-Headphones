@@ -19,6 +19,9 @@ a {
   text-decoration: none;
   color: white;
 }
+li {
+  list-style: none;
+}
 img {
   object-fit: contain;
 }
@@ -36,17 +39,23 @@ img {
   background: #f14a16;
   border-radius: 10px;
 }
-
+.no-scroll {
+  overflow: hidden;
+}
 /* dark and light mode */
 
 :root {
   --text-color: rgb(255, 255, 255);
   --text-color2: #a4a4a4;
+  --border-color: rgb(255, 255, 255);
+  --bg-color: black;
 }
 
 .lightMode {
   --text-color: black;
   --text-color2: #282828;
+  --bg-color: white;
+  --border-color: black;
 }
 
 .dark-mode {
@@ -81,6 +90,7 @@ img {
 
 .menuIcon {
   color: white;
+  cursor: pointer;
   display: none;
 }
 
@@ -88,7 +98,7 @@ img {
 
 .headerNav {
   position: fixed;
-  z-index: 2;
+  z-index: 500;
   width: 100%;
   color: #ffffff;
   height: 130px;
@@ -643,4 +653,111 @@ img {
   font-size: 32px;
   line-height: 46px;
   padding-top: 133px;
+}
+
+/* mobile nav */
+
+.blackBackGround {
+  z-index: 999;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.603);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+}
+.blackBackGroundBlock {
+  display: block;
+  cursor: pointer;
+}
+.mobileParent {
+  position: fixed;
+  height: 100%;
+  width: 400px;
+  padding: 10px 63px;
+  left: 0;
+  z-index: 9999;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  animation-name: menu;
+  animation-duration: 1s;
+  transition: 0.3s;
+  display: none;
+  font-family: "Lato", sans-serif !important;
+}
+@keyframes menu {
+  from {
+    transform: translate(-100%);
+  }
+  to {
+    transform: translate(0%);
+  }
+}
+
+@keyframes menuClose {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}
+
+.mobileParent.hide {
+  animation: menuClose 0.5s forwards;
+}
+
+.mobilelogo {
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+}
+#closeNav {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.2px;
+  position: absolute;
+  top: 50px;
+}
+
+.mobileMenu2 {
+  margin-top: 150px;
+}
+.mobileMenu2 li {
+  padding-top: 25px;
+}
+.menu-link2 {
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.36px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+.social-media-mobile {
+  margin-top: 400px;
+  display: flex;
+  gap: 30px;
+  cursor: pointer;
+}
+.social-media i {
+  cursor: pointer;
+}
+.mobileIcons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.mobileIcons a {
+  font-size: 20px;
+  color: var(--text-color);
+}
+.fa-cart-shopping2 {
+  display: block !important;
 }

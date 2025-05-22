@@ -14,10 +14,13 @@
 <body>
 
 
+    <div class="blackBackGround" data-aos="fade-left" data-aos-duration="1000"></div>
+
+
     <header class="headerNav">
-        <section>
+        <section id="home">
             <div class="header__container">
-                <div class="menuIcon">
+                <div class="menuIcon fabarsA">
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <div class="logoImg">
@@ -27,13 +30,13 @@
                 </div>
                 <ul class="navigation">
                     <li class="menuLink">
-                        <a href="#">Home</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li class="menuLink">
-                        <a href="#">Explore</a>
+                        <a href="#explore">Explore</a>
                     </li>
                     <li class="menuLink">
-                        <a href="#">Contact Us</a>
+                        <a href="#footer">Contact Us</a>
                     </li>
                     <li class="mode">
                         <a href="#">
@@ -61,6 +64,45 @@
             </div>
         </section>
     </header>
+    <div class="mobileParent">
+        <ul class="mobileMenu">
+            <div class="logoImg logo mobilelogo">
+                <a href="#">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <li>
+                    <a id="closeNav" href="#"><i class="fa-brands fa-x"></i></a>
+                </li>
+            </div>
+            <div class="mobileIcons">
+                <a href="#" class="mobileMode">
+                    <i class="fa-solid fa-sun fa-sun-mobile"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="">
+                    <i class="fa-solid fa-cart-shopping fa-cart-shopping2"></i>
+                </a>
+            </div>
+        </ul>
+        <ul class="mobileMenu2">
+            <li>
+                <a href="#home" class="menu-link2">HOME</a>
+            </li>
+            <li>
+                <a href="#explore" class="menu-link2">EXPLORE</a>
+            </li>
+            <li>
+                <a href="#footer" class="menu-link2">CONTACT</a>
+            </li>
+        </ul>
+        <div class=" social-media-mobile">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-tiktok"></i>
+        </div>
+    </div>
 
 
     <main>
@@ -260,7 +302,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="explore">
             <div class="arrivals__container">
                 <h1 class="title">New Arrivals</h1>
                 <div class="trendsParent" style="gap: 20px;">

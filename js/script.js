@@ -16,6 +16,13 @@ let menuIcon = document.getElementsByClassName("menuIcon")[0];
 let headerNav = document.getElementsByClassName("headerNav")[0];
 let topBtn2 = document.getElementsByClassName("topBtn2")[0];
 let timerClock = document.querySelectorAll(".timerClock");
+let fabarsA = document.querySelector(".fabarsA");
+let blackBackGround = document.getElementsByClassName("blackBackGround")[0];
+let mobileParent = document.getElementsByClassName("mobileParent")[0];
+let closeNav = document.getElementById("closeNav");
+let menulink2 = document.querySelectorAll(".menu-link2");
+let mobileMode = document.getElementsByClassName("mobileMode")[0];
+let faSunMobile = document.getElementsByClassName("fa-sun-mobile")[0];
 
 function windowSize() {
   let isLightMode = sunIcon.classList.contains("fa-moon");
@@ -192,3 +199,56 @@ let timer = setInterval(() => {
   minutesDom.innerHTML = `${minutes}`;
   secondsDom.innerHTML = `${seconds}`;
 }, 1000);
+
+// mobiel nav
+
+mobileMode.addEventListener("click", () => {
+  mobileParent.classList.toggle("lightMode");
+  localStorage.setItem(
+    "mobileMode",
+    mobileParent.classList.contains("lightMode") ? "light" : "dark"
+  );
+});
+
+mobileMode.addEventListener("click", (e) => {
+  e.preventDefault();
+  changeMode.click();
+  if (faSunMobile.classList.contains("fa-sun")) {
+    faSunMobile.classList.toggle("fa-moon");
+  }
+});
+
+fabarsA.addEventListener("click", () => {
+  if (blackBackGround.classList.contains("blackBackGround")) {
+    blackBackGround.classList.add("blackBackGroundBlock");
+    mobileParent.style.display = "block";
+    body.classList.add("no-scroll");
+  }
+});
+
+blackBackGround.addEventListener("click", () => {
+  blackBackGround.classList.remove("blackBackGroundBlock");
+  mobileParent.classList.add("hide");
+  body.classList.remove("no-scroll");
+});
+
+menulink2.forEach((e) => {
+  e.addEventListener("click", () => {
+    blackBackGround.classList.remove("blackBackGroundBlock");
+    mobileParent.classList.add("hide");
+    body.classList.remove("no-scroll");
+  });
+});
+
+closeNav.addEventListener("click", () => {
+  blackBackGround.classList.remove("blackBackGroundBlock");
+  mobileParent.classList.add("hide");
+  body.classList.remove("no-scroll");
+});
+
+mobileParent.addEventListener("animationend", () => {
+  if (mobileParent.classList.contains("hide")) {
+    mobileParent.style.display = "none";
+    mobileParent.classList.remove("hide");
+  }
+});
